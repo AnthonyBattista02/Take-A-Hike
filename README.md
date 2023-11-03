@@ -20,4 +20,4 @@ https://lucid.app/lucidchart/5737306d-dc3f-471e-8cd7-8b89595d7bea/edit?viewport_
 https://drive.google.com/file/d/1i5Ce8Mz8Cu_rabkMBe2O04IuyalyBNGy/view?usp=sharing 
 
 ## Future Updates
-
+Stretch goals such as a rating system in reviews are planned, but only after a MVP is made.
