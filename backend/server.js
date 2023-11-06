@@ -4,11 +4,9 @@ const PORT = process.env.PORT||3001
 const cors = require('cors')
 const logger = require('morgan')
 const bodyParser = require('body-parser')
-const db = require('./db')
 
 const app = express()
 
-const db = require('./db')
 const trailController = require('./controllers/trailController')
 const reviewController = require('./controllers/reviewController')
 const userController = require('./controllers/userController')
