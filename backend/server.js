@@ -1,4 +1,5 @@
 const express = require('express')
+const db = require('./db')
 const PORT = process.env.PORT||3001
 const cors = require('cors')
 const logger = require('morgan')
@@ -22,3 +23,10 @@ app.get('/trails/:id', trailController.getOneTrail)
 app.post('/trails', trailController.createTrail)
 app.put('/trails/:id', trailController.updateTrail)
 app.delete('/trails/:id', trailsController.deleteTrail)
+
+// USER
+app.get('/users', userController.getUsers)
+app.get('/users/:id', userController.getUser)
+app.post('/users', userController.createUser)
+app.put('/users/:id', userController.updateUser)
+app.delete('/users/:id', userController.deleteUser)

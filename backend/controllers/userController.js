@@ -1,4 +1,4 @@
-const { User } = require('../models');
+const User = require('../models/user');
 
 const getAllUsers = async (req, res) => {
     try {
@@ -52,9 +52,9 @@ const deleteUser = async (req, res) => {
         const { id } = req.params;
         const deleted = await User.findByIdAndDelete(id)
         if (deleted) {
-            return res.status(200).send("User Found!");
+            return res.status(200).send("User deleted");
         }
-        throw new Error("Deleting User");
+        throw new Error("User not found");
     } catch (error) {
         return res.status(500).send(error.message);
     }
