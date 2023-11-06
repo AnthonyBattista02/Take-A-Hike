@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 
 const app = express()
 
+const db = require('./db')
 const trailController = require('./controllers/trailController')
 const reviewController = require('./controllers/reviewController')
 const userController = require('./controllers/userController')
@@ -19,7 +20,7 @@ app.use(express.urlencoded({extended: false}))
 app.get('/', (req, res) => {
     res.send('This is root')
   })
-  
+
 //TRAILS
 app.get('/trails', trailController.getAllTrails)
 app.get('/trails/:id', trailController.getOneTrail)
