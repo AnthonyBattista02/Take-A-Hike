@@ -17,4 +17,8 @@ app.listen(PORT,() => {
 })
 
 //TRAILS
-app.get('/trails', )
+app.get('/trails', trailController.getAllTrails)
+app.get('/trails/:id', trailController.getOneTrail)
+app.post('/trails', trailController.createTrail)
+app.put('/trails/:id', trailController.updateTrail)
+app.delete('/trails/:id', trailsController.deleteTrail)
