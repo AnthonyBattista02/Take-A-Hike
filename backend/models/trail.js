@@ -11,7 +11,7 @@ const trailSchema = new Schema(
         trailSurface: {type: String, required: true},
         feesPermits: {type: String, required: true},
         schedule: {type: String, required: true},
-        image: {type: Image, required: false}
+        image: {type: String, required: true}
     },
     {timestamps: true},
 )
