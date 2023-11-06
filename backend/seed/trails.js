@@ -13,7 +13,7 @@ const main = async() => {
             trailSurface: "Crushed gravel and dirt",
             feesPermits: "None",
             schedule: "5:00am to 10:00pm daily",
-            image: "frontend/src/assets/doveSprings.jpg"
+            image: "backend/assets/doveSprings.jpg"
         },
         {
             trailName: "McKinney Roughs Nature Park: Buckeye Trail",
@@ -23,7 +23,7 @@ const main = async() => {
             trailSurface: "Dirt path, sand",
             feesPermits: "Day-use fee",
             schedule: "8:00am to 5:00pm daily",
-            image: "frontend/src/assets/mckinneyRoughs.jpg",
+            image: "backend/assets/mckinneyRoughs.jpg",
         },
         {
             trailName: "McKinney Falls State Park: Homestead Trail",
@@ -33,7 +33,7 @@ const main = async() => {
             trailSurface: "Dirt path with some limestone outcrops",
             feesPermits: "Day-use fee",
             schedule: "8:00am to 10:00pm daily",
-            image: "frontend/src/assets/McKinney Falls.jpeg",
+            image: "backend/assets/McKinney Falls.jpg",
         },
         {
             trailName: "Blunn Creek Preserve",
@@ -43,7 +43,7 @@ const main = async() => {
             trailSurface: "Dirt with some rock",
             feesPermits: "None",
             schedule: "5:00am to 10:00pm daily",
-            image: "frontend/src/assets/blunnCreek.jpg",
+            image: "backend/assets/blunnCreek.jpg",
         },
         {
             trailName: "St. Edwards Park: Hill and Creek Trails",
@@ -53,7 +53,7 @@ const main = async() => {
             trailSurface: "Dirt, stones, limestone outcrops",
             feesPermits: "None",
             schedule: "5:00am to 10:00pm daily",
-            image: "frontend/src/assets/stEds.jpeg",
+            image: "backend/assets/stEds.jpg",
         },
         {
             trailName: "Wild Basin Wilderness Preserve",
@@ -63,7 +63,7 @@ const main = async() => {
             trailSurface: "Dirt, limestone",
             feesPermits: "Voluntary day-use fee based on the honor system",
             schedule: "Sunrise to sunset daily",
-            image: "frontend/src/assets/wildBasin.jpg",
+            image: "backend/assets/wildBasin.jpg",
         },
         {
             trailName: "Emma Long Metropolitan Park: Turkey Creek Trail",
@@ -73,7 +73,7 @@ const main = async() => {
             trailSurface: "Dirt path",
             feesPermits: "None",
             schedule: "7:00am to 10:00pm daily",
-            image: "frontend/src/assets/emmaLong.jpg",
+            image: "backend/assets/emmaLong.jpg",
         },
         {
             trailName: "Commons Ford: Lake Austin Loop",
@@ -83,7 +83,7 @@ const main = async() => {
             trailSurface: "Dirt, grass",
             feesPermits: "None",
             schedule: "1:0pam to 6:00pm Tuesday through Sunday",
-            image: "frontend/src/assets/commonsFord.jpg",
+            image: "backend/assets/commonsFord.jpg",
         },
         {
             trailName: "Barton Creek Greenbelt: Gaines Creek Access",
@@ -93,7 +93,7 @@ const main = async() => {
             trailSurface: "Dirt and rock",
             feesPermits: "None",
             schedule: "5:00am to 10:00pm daily",
-            image: "frontend/src/assets/bartonCreek.jpg",
+            image: "backend/assets/bartonCreek.jpg",
         },
         {
             trailName: "Balcones Canyonlands National Wildlife Refuge: Cactus Rocks Trail",
@@ -103,7 +103,7 @@ const main = async() => {
             trailSurface: "Dirt, gravel, limestone outcrop",
             feesPermits: "None",
             schedule: "Sunrise to sunset daily",
-            image: "frontend/src/assets/balconesCanyonlands.jpg",
+            image: "backend/assets/balconesCanyonlands.jpg",
         },
     ]
     await Trail.insertMany(trails)
