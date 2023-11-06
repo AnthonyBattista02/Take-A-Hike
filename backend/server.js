@@ -1,4 +1,5 @@
 const express = require('express')
+const db = require('./db')
 const PORT = process.env.PORT||3001
 const cors = require('cors')
 const logger = require('morgan')
@@ -46,3 +47,4 @@ app.delete('/users/:id', userController.deleteUser)
 app.listen(PORT,() => {
     console.log(`Express server listening on port ${PORT}`)
 })
+
