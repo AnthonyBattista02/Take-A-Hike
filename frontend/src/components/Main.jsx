@@ -1,6 +1,7 @@
 import { Route, Routes} from 'react-router-dom'
 import Home from './Home'
 
+import TrailList from './TrailList'
 
 export default function Main(props) {
     return (
@@ -8,6 +9,7 @@ export default function Main(props) {
           <Routes>
           
             <Route path='/' element={<Home/>} />
+            <Route path ="/trails" element={<TrailList/>}/>
           
           </Routes>
         </div>
