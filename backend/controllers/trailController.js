@@ -43,7 +43,7 @@ async function createTrail(req, res) {
 async function updateTrail(req, res) {
     try{
         const id = req.params.id
-        const trail = await Material.findByIdAndUpdate(id, req.body, {new: true})
+        const trail = await Trail.findByIdAndUpdate(id, req.body, {new: true})
         if (trail) {
             return res.status(200).json(trail)
         }

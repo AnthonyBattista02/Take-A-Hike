@@ -22,7 +22,7 @@ async function getOneReview(req, res) {
     }
 }
 
-async function createReviews(req, res) {
+async function createReview(req, res) {
     console.log("create review")
     try{
         const review = await new Review(req.body)
@@ -63,5 +63,5 @@ async function deleteReview(req, res) {
 
 
 module.exports = {
-    getAllReviews, getOneReview, createReviews, updateReview, deleteReview,
+    getAllReviews, getOneReview, createReview, updateReview, deleteReview,
 }
