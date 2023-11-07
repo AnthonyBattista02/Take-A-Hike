@@ -8,7 +8,7 @@ import Header from './components/Header'
 import Main from './components/Main'
 import Home from './components/Home'
 import TrailList from './components/TrailList'
-
+import TrailPage from './components/TrailPage'
 
 function App() {
   const [trails, setTrails] = useState([])
@@ -16,12 +16,10 @@ function App() {
   useEffect(() => {
     const getTrails = async () => {
       const response = await axios.get(`${BASE_URL}/trails`)
-      console.log(response.data)
       setTrails(response.data)
     }
     getTrails()
   }, [])
-
 
   return (
     <div>
@@ -30,6 +28,7 @@ function App() {
         <Routes>
           <Route path = "/" element = {<Home /> } />
           <Route path = "/trails" element = {<TrailList trails={trails}/>} />
+          <Route path = "/trails/:id" element = {<TrailPage trails={trails}/>} />
         </Routes>
     </div>
         

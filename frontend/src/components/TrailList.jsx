@@ -17,17 +17,12 @@ const TrailList = (props) => {
 
                 <div className="grid">
 
-                    {props.trails.map((trail, key) => (
-                        <div key = {key} onClick={()=>showTrail(key)} className="card">
+                    {props.trails.map((trail) => (
+                        <div key = {trail._id} onClick={()=>showTrail(key)} className="card">
                             <h3>{trail.trailName}</h3>
                             <ul>
                                 <li>Distance: {trail.miDistance}</li>
                                 <li>Difficulty: {trail.difficulty}</li>
-                                <li>Approximate Hiking Time: {trail.hikingTimeHrs}</li>
-                                <li>Trail Surface: {trail.trailSurface}</li>
-                                <li>Fees and Permits: {trail.feesPermits}</li>
-                                <li>Schedule: {trail.schedule}</li>
-                                <li>Image link: {trail.image}</li>
                             </ul>
                         </div>
                     ))}
