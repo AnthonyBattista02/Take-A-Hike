@@ -7,8 +7,8 @@ const TrailList = (props) => {
     } else {
         let navigate = useNavigate()
 
-        const showTrail = (key) => {
-            navigate(`${key}`)
+        const showTrail = (variable) => {
+            navigate(`${variable}`)
         }
 
         return(
