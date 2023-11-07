@@ -1,14 +1,23 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { BASE_URL } from '../globals'
 
-const TrailList = (props) => {
-    if (!props.trails) {
-        return<h2>Loading trails please wait...</h2>
-    } else {
+const TrailList = () => {
+    const [trails, setTrails] = useState([])
+
+    useEffect(() => {
+        const getTrails = async () => {
+        const response = await axios.get(`${BASE_URL}/trails`)
+        setTrails(response.data)
+        }
+        getTrails()
+    }, [])
+
         let navigate = useNavigate()
 
-        const showTrail = (key) => {
-            navigate(`${key}`)
+        const showTrail = (variable) => {
+            navigate(`${variable}`)
         }
 
         return(
@@ -17,8 +26,8 @@ const TrailList = (props) => {
 
                 <div className="grid">
 
-                    {props.trails.map((trail) => (
-                        <div key = {trail._id} onClick={()=>showTrail(key)} className="card">
+                    {trails.map((trail) => (
+                        <div key = {trail._id} onClick={()=>showTrail(trail._id)} className="card">
                             <h3>{trail.trailName}</h3>
                             <ul>
                                 <li>Distance: {trail.miDistance}</li>
@@ -29,6 +38,6 @@ const TrailList = (props) => {
                 </div>
             </div>
         )}
-}
+
 
 export default TrailList
