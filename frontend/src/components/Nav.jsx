@@ -1,10 +1,13 @@
-import { useState, useEffect, useContext } from 'react'
-import { Link, useParams, useNavigate } from "react-router-dom"
-import axios from 'axios'
+//import React from 'react'
+import { useEffect } from 'react'
+import { Link } from "react-router-dom"
+//import axios from 'axios'
 
+//import DataContext from '../DataContext'
 //import './Nav.css'
 
 export default function Nav() {
+  
   useEffect(() => {
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-menu");
@@ -23,17 +26,18 @@ export default function Nav() {
       });
     });
 
-    // Clean up event listeners when the Component unmounts
-    // return () => {
-    //   hamburger.removeEventListener("click")
-    //   document.querySelectorAll(".nav-link").forEach((navLink) => {
-    //     navLink.removeEventListener("click")
-    //   })
-    //}
+    //Clean up event listeners when the Component unmounts
+    return () => {
+      hamburger.removeEventListener("click")
+      document.querySelectorAll(".nav-link").forEach((navLink) => {
+        navLink.removeEventListener("click")
+      })
+    }
   }, [])
 
+  const Nav = () => {
   return (
-    <header>
+    <Nav>
       <div className="container">
         <div className="subcontainer">
           <nav className='nav'>
@@ -57,6 +61,7 @@ export default function Nav() {
           </nav>
         </div>
       </div>
-    </header>
-  );
+    </Nav>
+  )
+}
 }
