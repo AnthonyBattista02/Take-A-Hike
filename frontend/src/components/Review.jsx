@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
+import ReviewForm from './ReviewForm'
+import './Review.css'
 
-export default function Review (props) {
+export default function Review () {
 
     const [reviews, setReviews] = useState([])
 
@@ -10,7 +12,6 @@ export default function Review (props) {
         const getReviews = async () => {
         const response = await axios.get(`${BASE_URL}/reviews`)
         setReviews(response.data)
-        console.log(response.data)
         }
         getReviews()
     }, [])
@@ -24,6 +25,7 @@ export default function Review (props) {
                     <h5 id='reviewText'> {review.reviewText} </h5>
                 </div>
             ))}
+            <ReviewForm />
                 
         </div>
     )
