@@ -1,0 +1,40 @@
+.review-container {
+    display: flex;
+    margin: auto;
+    padding-left: 20px;
+    width: 600px;
+    flex-direction: column;
+}
+.review-card {
+    border: 2px solid black;
+    margin: auto;
+    margin-top: 20px;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(205, 208, 211);
+}
+.review-form {
+    margin-top: 20px;
+}
+select {
+    width: 100%;
+    height: 30px;
+}
+.username {
+    width: 30%
+}
+.review-text {
+    width: 99%;
+    height: 100px;
+    text-align: left;
+    font-size: 20px;
+}
+.review-text::placeholder {
+    position: absolute;
+    top: 6px
+}
+.submit {
+    font-size: 24px;
+    margin-top: 2px;
+}
