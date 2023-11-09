@@ -8,6 +8,7 @@ import Main from './components/Main'
 import Home from './components/Home'
 import TrailList from './components/TrailList'
 import TrailPage from './components/TrailPage'
+import UserPage from './components/UserPage'
 
 function App() {
 

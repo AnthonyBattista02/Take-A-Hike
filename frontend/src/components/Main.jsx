@@ -4,6 +4,7 @@ import Home from './Home'
 import TrailList from './TrailList'
 import TrailPage from './TrailPage'
 import Review from './Review'
+import UserPage from './UserPage'
 
 export default function Main(props) {
     return (
@@ -13,6 +14,7 @@ export default function Main(props) {
             <Route path = "/trails" element={<TrailList/>}/>
             <Route path = "/trails/:id" element = {<TrailPage/>} />
             <Route path = "/reviews" element = {<Review />} />
+            <Route path = "/users/:id" element = {<UserPage/>} />
           </Routes>
         </div>
       )

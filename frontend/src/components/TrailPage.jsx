@@ -21,9 +21,9 @@ return trail ? (
     <div className="detail">
         <h2 className="detail-title">{trail.trailName}</h2>
         <ul>
-            <li>Distance: {trail.miDistance}</li>
+            <li>Distance: {trail.miDistance} mi.</li>
             <li>Difficulty: {trail.difficulty}</li>
-            <li>Approximate Hiking Time: {trail.hikingTimeHrs}</li>
+            <li>Approximate Hiking Time: {trail.hikingTimeHrs} hrs.</li>
             <li>Trail Surface: {trail.trailSurface}</li>
             <li>Fees and Permits: {trail.feesPermits}</li>
             <li>Schedule: {trail.schedule}</li>
