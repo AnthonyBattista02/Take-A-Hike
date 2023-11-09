@@ -1,115 +1,33 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-
-body{
-    position: relative;
-    height: 1000vh;
-}
-
-header{
-    position: fixed;
-    top: 0;
+/*
+.navigation {
     width: 100%;
-    background-color: bisque;
+    height: 50px;
 }
 
-li{
-    list-style: none;
-}
-
-a{
-    color: black;
-    text-decoration: none;
-}
-
-.container{
-    width: 1600px;
-    margin: auto;
-}
-
-.subcontainer{
-    width: 85%;
-    margin: auto;
-}
-
-.navbar{
-    width: 100%;
-    min-height: 70px;
+.navigation ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
 }
 
-.nav-menu{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
+.navigation ul li {
+    list-style-type: none;
+    padding-right: 10px;
 }
 
-.nav-branding{
-    font-size: 2rem;
-}
-
-.hamburger{
+.hamburger {
     display: none;
-    cursor: pointer;
+    z-index: 6;
 }
 
-.bar{
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-    background-color: black;
-}
-
-#home{
-    margin-top: 70px;
-    border: 1px solid black;
-    height: 100vh;
-}
-
-@media(max-width:1600px){
-    .container{
-        width: 100%;
-    }
-}
-
-@media(max-width:1024px){
-    .hamburger{
-        display: block;
-    }
-
-    .hamburger.active .bar:nth-child(2){
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1){
-        transform: translateY(8px); rotate:(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px); rotate:(-45deg);
-    }
-
-.nav-menu{
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    gap: 0;
-    flex-direction: column;
-    background-color: crimson;
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.nav-menu.active{
-    left: 0;
-}
-
+.navigation.open ul {
+  display: inline;
+  background-color: blue;
+  height: 100vh;
+  width: 50vw;
+  margin-top: 50px;
+  position: fixed;
 }
