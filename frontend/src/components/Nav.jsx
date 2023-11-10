@@ -19,7 +19,7 @@ const Nav = () => {
 
       <div className={`menu-links ${menuOpen ? 'open' : ''}`}>
         <Link to="/">Home</Link>
-        <Link to="/Trails">Trails</Link>
+        <Link to="/trails">Trails</Link>
         <Link to="/Reviews">Reviews</Link>                             
       </div>
     </div>
