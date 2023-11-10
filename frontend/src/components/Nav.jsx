@@ -1,29 +1,46 @@
-import { Link } from 'react-router-dom'
-import React, { useState } from 'react'
-//import axios from 'axios'
-import '../App.css'
-import Hamburger from './Hamburger.jsx'
+import React, { useState } from 'react';
+import {
+  MDBContainer,
+  MDBCollapse,
+  MDBNavbar,
+  MDBNavbarToggler,
+  MDBIcon,
+  MDBBtn,
+} from 'mdb-react-ui-kit';
 
-const Nav = () => {
-  
-  const [menuOpen, setMenuOpen] = useState(false)
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen)
-  }
+export default function Nav() {
+  const [showNavExternal2, setShowNavExternal2] = useState(true);
 
   return (
-    <div className='Nav'>
-      <div className="hamburger-icon" onClick={toggleMenu}> 
-      </div>
+    <>
+      <MDBNavbar>
+        <MDBContainer fluid>
+          <MDBNavbarToggler
+            type='button'
+            data-target='#navbarToggleExternalContent'
+            aria-controls='navbarToggleExternalContent'
+            aria-expanded='false'
+            aria-label='Toggle navigation'
+            onClick={() => setShowNavExternal2(!showNavExternal2)}
+          >
+            <MDBIcon icon='bars' fas />
+          </MDBNavbarToggler>
+        </MDBContainer>
+      </MDBNavbar>
 
-      <div className={`menu-links ${menuOpen ? 'open' : ''}`}>
-        <Link to="/">Home</Link>
-        <Link to="/Trails">Trails</Link>
-        <Link to="/Reviews">Reviews</Link>                             
-      </div>
-    </div>
-  )
+      <MDBCollapse show={showNavExternal2}>
+        <div className='bg-light shadow-3 p-4'>
+          <MDBBtn block className='border-bottom m-0' color='link'>
+            Link 1
+          </MDBBtn>
+          <MDBBtn block className='border-bottom m-0' color='link'>
+            Link 2
+          </MDBBtn>
+          <MDBBtn block className='border-bottom m-0' color='link'>
+            Link 2
+          </MDBBtn>
+        </div>
+      </MDBCollapse>
+    </>
+  );
 }
-
-export default Nav
