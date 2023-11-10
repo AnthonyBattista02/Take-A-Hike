@@ -1,4 +1,4 @@
-/* #root {
+/*#root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -9,19 +9,26 @@ body {
   background-color: rgb(211, 208, 208);
   color: black;
   overflow-x: hidden; 
+  width: 1000px;
 }
 
+.routes-container{
+  width: 1000px;
+}
+
+.Carousel{
+  width: 100%;
+  height: 1000px; 
+
+}
 header {
   background-color: rgba(202, 10, 10, 0);
-  color: #d01515;
+  color: #fff;
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
   position: fixed;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 2.0em;
@@ -31,9 +38,18 @@ header {
 .Nav {
   width: 100%;
   height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px 20px;
 }
 
-.navigation ul {
+.Nav .menu-links {
+  display: fixed; /* Initially hide the links */
+}
+
+.Nav ul {
   display: flex;
   flex-wrap: wrap;
   float: right;
@@ -42,7 +58,7 @@ header {
   overflow: hidden;
 }
 
-.navigation ul li {
+.Nav ul li {
   list-style-type: none;
   padding-right: 10px;
 }
@@ -63,37 +79,68 @@ position: fixed;
 /* End of NAV */
 
 /* Hamburger */
-.hamburger {
-  width: 2rem;
-  height: 2rem;
+.hamburger-icon {
+  user-select: none;
+  display: block;
+  cursor: pointer;
+  font-size: 24px;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+
+.menu-links {
+  display: none;
+}
+
+.menu-links.open {
   display: flex;
-  justify-content: space-around;
-  flex-flow: column nowrap;
-  z-index: 10;
+  flex-direction: column;
+  background-color: #333;
+  position: absolute;
+  top: 69px; 
+  right: 25px;
+  padding: 20px;
 }
 
-.burger {
-  width: 2rem;
-  height: 0.25rem;
-  border-radius: 10px;
-  background-color: black;
-  transform-origin: 1px;
-  transition: all 0.3s linear;
+.menu-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 10px 0;
 }
 
+.menu-links a:hover {
+  color: blue;
+}
+
+/* 
 .burger1 {
-  transform: rotate(0);
+  transform: rotate(0); /* Default rotation 
 }
 
 .burger2 {
-  transform: translateX(0);
-  opacity: 1;
+  transform: translateX(0); /* Default translation */
+  /*opacity: 1; /* Default opacity 
 }
 
 .burger3 {
-  transform: rotate(0);
+  transform: rotate(0); /* Default rotation 
 }
-/* End of Hamburger */
+
+/* Add these styles for changes when isOpen is true 
+.hamburger-icon.isOpen .burger1 {
+  transform: rotate(45deg);
+}
+
+.hamburger-icon.isOpen .burger2 {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.hamburger-icon.isOpen .burger3 {
+  transform: rotate(-45deg);
+}
+End of Hamburger */
 
 .logo {
   height: 6em;
