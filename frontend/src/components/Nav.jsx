@@ -12,6 +12,7 @@ export default function Nav() {
   const [showNavExternal2, setShowNavExternal2] = useState(true);
 
   return (
+
     <>
       <MDBNavbar>
         <MDBContainer fluid>

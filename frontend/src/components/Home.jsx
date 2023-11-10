@@ -1,3 +1,6 @@
+import ChooseYourTrail from "./ChooseYourTrailHome"
+import UserTrailData from "./UserTrailDataHome";
+import Footer from "./Footer";
 import React, { useState } from 'react';
 import {
   Carousel,
@@ -71,6 +74,11 @@ const Home = () => {
       <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
       <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
     </Carousel>
+    <div> 
+      <ChooseYourTrail />
+      <UserTrailData />
+      <Footer />
+    </div>
   );
 }
 
