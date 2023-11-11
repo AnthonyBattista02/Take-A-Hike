@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
+import Footer from "./Footer";
 import { BASE_URL } from '../globals'
 
 const TrailList = () => {
@@ -14,17 +15,15 @@ const TrailList = () => {
         }
         const getUser = async () => {
         const userResponse = await axios.get(`${BASE_URL}/users`)
+        
         setUsers(userResponse.data)
-        userID = userResponse.data[0]._id
+
+        //If adding multiple user profiles, revise this to find user.
+        //userID = userResponse.data[0]._id
         }
         getTrails()
         getUser()
-    }, [])
-
-        //If adding multiple user profiles, revise this to find user.
-        
-
-        const button = document.getElementById("wantToHike")
+    }, [])   
 
         let navigate = useNavigate()
 
@@ -32,8 +31,7 @@ const TrailList = () => {
             navigate(`${variable}`)
         }
 
-        
-        let userID
+        //let userID
 
         const addWantToHike = async (trailIDVar) => {
             let currentUser = users[0]
@@ -42,8 +40,14 @@ const TrailList = () => {
                 currentUser.wantToHike.push(trailIDVar)
                 console.log(currentUser)
                 await axios.put(`${BASE_URL}/users/${currentUser._id}`, currentUser)
+                
+                const button = document.getElementById("wantToHike")
+                
                 button.disabled=true
-                button.innerText= "On your list!"
+                // if (this.innerText == "Want to Hike") {
+                //     this.innerText == "On your list!"
+                // }
+                // button.innerHTML= "On your list!"
             }
         }
 
@@ -61,11 +65,16 @@ const TrailList = () => {
                                 <li>Difficulty: {trail.difficulty}</li>
                             </ul>
                             <button onClick={()=>showTrail(trail._id)}>Trail Details</button>
-                            <Link to = {`/users/${userID}`}><button id="wantToHike" onClick={()=> addWantToHike(trail._id)}>Want to Hike</button></Link>
+                            {users.map((user) => (
+                                <Link to = {`/users/${user._id}`}><button id="wantToHike" onClick={()=> addWantToHike(trail._id)}>Want to Hike</button></Link>
+                            ))}
+                                
                         </div>
                     ))}
                 </div>
+                
             </div>
+            
         )}      
 
 export default TrailList
