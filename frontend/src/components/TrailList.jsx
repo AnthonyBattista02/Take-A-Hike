@@ -41,9 +41,9 @@ const TrailList = () => {
                 console.log(currentUser)
                 await axios.put(`${BASE_URL}/users/${currentUser._id}`, currentUser)
                 
-                const button = document.getElementById("wantToHike")
+                //const button = document.getElementById("wantToHike")
                 
-                button.disabled=true
+                //button.disabled=true
                 // if (this.innerText == "Want to Hike") {
                 //     this.innerText == "On your list!"
                 // }
@@ -66,7 +66,7 @@ const TrailList = () => {
                             </ul>
                             <button onClick={()=>showTrail(trail._id)}>Trail Details</button>
                             {users.map((user) => (
-                                <Link to = {`/users/${user._id}`}><button id="wantToHike" onClick={()=> addWantToHike(trail._id)}>Want to Hike</button></Link>
+                                <Link to = {`/users/${user._id}`} key = {user._id}><button id="wantToHike" onClick={()=> addWantToHike(trail._id)}>Want to Hike</button></Link>
                             ))}
                                 
                         </div>
