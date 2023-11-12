@@ -7,7 +7,7 @@ import React, { useRef } from 'react'
 export default function ReviewForm () {
 
     const [trails, setTrails] = useState([])
-
+  
     useEffect(() => {
         const getTrails = async () => {
         const response = await axios.get(`${BASE_URL}/trails`)
@@ -16,12 +16,13 @@ export default function ReviewForm () {
         getTrails()
     }, [])
     
-    console.log(trails)
+    
     trails.forEach(option => {
         const optionElement = document.createElement('option');
         optionElement.value = option.trailName;
         optionElement.textContent = option.trailName;
         trailselectlist.appendChild(optionElement);
+
       })
 
     //   The following code with comments was made with the help of chatGPT
@@ -46,7 +47,7 @@ export default function ReviewForm () {
             changeActionURL(); // Call the function to change the action URL
             // You can add additional logic here if needed
             myFormRef.current.submit(); // Submit the form with the updated action URL
-            changeActionURL()
+           
           });
         }
       }, [])
@@ -57,7 +58,7 @@ export default function ReviewForm () {
             <form id="myForm" ref={myFormRef} method="post">
                 <select id="trailselectlist" name="trailName">
                 </select>
-                <input className="username" type="text" name="userName" value="User Name" readOnly/>
+                <input className="username" type="text" name="userName" placeholder="User Name"/>
                 <input className="review-text" type="text" name="reviewText" placeholder="Type Review Here"/>
                 <input className="submit" type='submit' value='Submit'/>
             </form>

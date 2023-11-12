@@ -3,6 +3,7 @@ import axios from 'axios'
 import { BASE_URL } from '../globals'
 import ReviewForm from './ReviewForm'
 import './Review.css'
+import Footer from './Footer'
 
 export default function Review () {
 
@@ -12,14 +13,14 @@ export default function Review () {
         const getReviews = async () => {
         const response = await axios.get(`${BASE_URL}/reviews`)
         setReviews(response.data)
-        console.log(response.data)
         }
         getReviews()
     }, [])
-
+    
+    
     const handleClick = (reviewId) => {
         axios.delete(`${BASE_URL}/reviews/${reviewId}`)
-        console.log('bithc')
+        window.location.reload();
     }
 
     return(
@@ -33,6 +34,7 @@ export default function Review () {
                 </div>
             ))}
             <ReviewForm />
+            <Footer />
                 
         </div>
     )
