@@ -12,14 +12,21 @@ export default function Review () {
         const getReviews = async () => {
         const response = await axios.get(`${BASE_URL}/reviews`)
         setReviews(response.data)
+        console.log(response.data)
         }
         getReviews()
-    }, [])
+    }, [reviews])
+
+    const handleClick = (reviewId) => {
+        axios.delete(`${BASE_URL}/reviews/${reviewId}`)
+        console.log('bithc')
+    }
 
     return(
         <div className="review-container">
             {reviews.map((review)=>(
-                <div className='review-card' key={review.reviewText}>
+                <div className='review-card' key={review._id}>
+                    <div onClick={() => handleClick(review._id)} id='x-button'>X</div>
                     <h2 id='trailName'> {review.trailName} </h2>
                     <h3 id='userName'> {review.userName} </h3>
                     <h5 id='reviewText'> {review.reviewText} </h5>
