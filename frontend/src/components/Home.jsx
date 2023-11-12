@@ -13,21 +13,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const items = [
   {
-    src: 'https://i0.wp.com/iconiclife.com/wp-content/uploads/2020/04/find-the-best-hiking-spots-in-the-world.jpg?fit=1100%2C749&ssl=1', 
-    //altText: 'Slide 1',
-    //caption: 'Slide 1'
+    src: 'https://picsum.photos/id/123/1200/400', 
+    altText: 'Slide 1',
+    caption: 'Slide 1'
   },
   {
-    src: 'https://hips.hearstapps.com/hmg-prod/images/sunny-day-on-na-pali-coast-from-from-kalalau-trail-royalty-free-image-1591628718.jpg?crop=1.00xw:0.753xh;0,0.177xh&resize=980:*', 
-    //altText: 'Slide 2',
-    //caption: 'Slide 2'
+    src: 'https://picsum.photos/id/123/1200/400', 
+    altText: 'Slide 2',
+    caption: 'Slide 2'
   },
   {
-    src: 'https://hips.hearstapps.com/hmg-prod/images/horseshoe-bend-royalty-free-image-1591628438.jpg?crop=1.00xw:0.753xh;0,0.140xh&resize=980:*', 
-    //altText: 'Slide 3',
-    //caption: 'Slide 3'
-  },
-  
+    src: 'https://picsum.photos/id/123/1200/400', 
+    altText: 'Slide 3',
+    caption: 'Slide 3'
+  }
 ];
 
 const Home = () => {
