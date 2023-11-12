@@ -1,5 +1,6 @@
 # Take-A-Hike
-![outdoorimage](https://imgur.com/gallery/IsfAcs1)
+<img src= https://github.com/AnthonyBattista02/Take-A-Hike/assets/143963972/76d2aac6-80d0-4c81-a74d-e4646b6056e1 width=950, height=500> 
+
 
 ## Project Description
 Take A Hike is intended for the outdoor connoisseur.  It is a full-stack application with both a functioning backend and frontend.  Created with hiking enthusiasts in mind, it is a site where you can view nearby trails, see detailed information about individual trails, track trails you would like to visit and those that you have visited as well as write and read reviews for them. 
@@ -22,18 +23,19 @@ https://drive.google.com/file/d/1i5Ce8Mz8Cu_rabkMBe2O04IuyalyBNGy/view?usp=shari
 
 ## Data Model Browser Renderings
 #### Trail
-![Trail Model Browser Image](https://imgur.com/a/6Iz16y9)
+<img src= https://github.com/AnthonyBattista02/Take-A-Hike/assets/143963972/1eaddb17-77d1-48df-8958-364628afa281 width=750, height=500>
 
 #### User
-![User Model Browser Image](https://imgur.com/a/Faink8h)
+<img src = https://github.com/AnthonyBattista02/Take-A-Hike/assets/143963972/9fa2d810-6bdc-444f-b882-f70f9868dfce width=750, height=500>
 
 #### Review
-![Review Model Browser Image](https://imgur.com/a/ONQBSiq)
+<img src = https://github.com/AnthonyBattista02/Take-A-Hike/assets/143963972/a49f4f8d-353b-4890-85ac-1731b9df32e9 width=750, height=500>
+
 
 ## Future Updates
 Stretch goals such as rendered images of each trail, a rating system in reviews, and multiple user profiles are goals for future iterations.
 
 ## Contributors
-<a href = "https://github.com/AnthonyBattista02">Anthony Battista</a>
-<a href = "https://github.com/ahunter623">Anthony Hunter</a>
-<a href = "https://github.com/srhshaw">Shanda Shaw</a>
+<a href = "https://github.com/AnthonyBattista02">Anthony Battista</a><br>
+<a href = "https://github.com/ahunter623">Anthony Hunter</a><br>
+<a href = "https://github.com/srhshaw">Shanda Shaw</a><br>
