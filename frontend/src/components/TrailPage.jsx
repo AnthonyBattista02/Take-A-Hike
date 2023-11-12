@@ -36,7 +36,7 @@ return trail ? (
             <li>Trail Surface: {trail.trailSurface}</li>
             <li>Fees and Permits: {trail.feesPermits}</li>
             <li>Schedule: {trail.schedule}</li>
-            <li>Image link: {trail.image}</li>
+            {/* <li>Image link: {trail.image}</li> */}
         </ul>
         <div>
             <h3 id = "trailName">{trail.trailName} Reviews</h3>

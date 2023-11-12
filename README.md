@@ -1,10 +1,11 @@
 # Take-A-Hike
+![outdoorimage](https://imgur.com/gallery/IsfAcs1)
 
 ## Project Description
-Our task is to build a full-stack, professional-looking application with a functioning backend and frontend. The application wil be a trail tracking site where you can find trails on a range of difficulty near you and track which ones you have been to as well as write and read reviews for them. 
+Take A Hike is intended for the outdoor connoisseur.  It is a full-stack application with both a functioning backend and frontend.  Created with hiking enthusiasts in mind, it is a site where you can view nearby trails, see detailed information about individual trails, track trails you would like to visit and those that you have visited as well as write and read reviews for them. 
 
 ## Technology Used
-This is a MERN application so we will be using Mongoose, Express, React, Node. 
+Take A Hike is a MERN application using Mongoose, Express, React, Node. 
 
 ## Getting Started
 
@@ -19,5 +20,20 @@ https://lucid.app/lucidchart/5737306d-dc3f-471e-8cd7-8b89595d7bea/edit?viewport_
 #### ERD
 https://drive.google.com/file/d/1i5Ce8Mz8Cu_rabkMBe2O04IuyalyBNGy/view?usp=sharing 
 
+## Data Model Browser Renderings
+#### Trail
+![Trail Model Browser Image](https://imgur.com/a/6Iz16y9)
+
+#### User
+![User Model Browser Image](https://imgur.com/a/Faink8h)
+
+#### Review
+![Review Model Browser Image](https://imgur.com/a/ONQBSiq)
+
 ## Future Updates
-Stretch goals such as a rating system in reviews are planned, but only after a MVP is made.
+Stretch goals such as rendered images of each trail, a rating system in reviews, and multiple user profiles are goals for future iterations.
+
+## Contributors
+<a href = "https://github.com/AnthonyBattista02">Anthony Battista</a>
+<a href = "https://github.com/ahunter623">Anthony Hunter</a>
+<a href = "https://github.com/srhshaw">Shanda Shaw</a>
