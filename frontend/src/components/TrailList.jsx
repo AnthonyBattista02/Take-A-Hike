@@ -59,15 +59,18 @@ const TrailList = () => {
 
                     {trails.map((trail) => (
                         <div key = {trail._id} className="card">
+                            <Link to = {`/trails/${trail._id}`}>
                             <h3>{trail.trailName}</h3>
                             <ul>
                                 <li>Distance: {trail.miDistance} mi.</li>
                                 <li>Difficulty: {trail.difficulty}</li>
                             </ul>
-                            <button onClick={()=>showTrail(trail._id)}>Trail Details</button>
+                            </Link>
+                            <div>
                             {users.map((user) => (
                                 <Link to = {`/users/${user._id}`} key = {user._id}><button id="wantToHike" onClick={()=> addWantToHike(trail._id)}>Want to Hike</button></Link>
                             ))}
+                            </div>
                                 
                         </div>
                     ))}
