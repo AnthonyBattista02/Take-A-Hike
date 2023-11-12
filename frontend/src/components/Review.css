@@ -38,3 +38,12 @@ select {
     font-size: 24px;
     margin-top: 2px;
 }
+#x-button {
+    border: red 2px solid;
+    position: relative;
+    width: 30px;
+    background-color: red;
+    font-weight: 900;
+    font-size: 20px;
+    height: 30px;
+}
