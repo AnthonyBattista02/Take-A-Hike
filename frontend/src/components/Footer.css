@@ -8,17 +8,19 @@
     background-color: bisque;
 }
 img {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 95px;
     padding-right: 20px;
     padding-left: 20px;
     padding-top: 5px
 }
 .footer-title {
     padding-right: 40px;
+    padding-top: 15px;
 }
 .footer-link {
     padding-right: 20px;
+    padding-top: 18px;
 }
 #navbar {
     padding-right: 20px;
