@@ -1,6 +1,49 @@
+//import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+
 import ChooseYourTrail from "./ChooseYourTrailHome"
-import UserTrailData from "./UserTrailDataHome";
+import UserTrailData from "./UserTrailDataHome"
 import Footer from "./Footer";
+
+//import Carousel from 'react-bootstrap/Carousel';
+import ExampleCarouselImage from '../assets/2Step-Hike.jpeg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+//import CarouselCaption from 'react-bootstrap/CarouselCaption'
+//import CarouselItem from 'react-bootstrap/CarouselItem'
+
+// function Home() {
+//   return (
+//     <Carousel fade>
+//       <Carousel.Item>
+//         <ExampleCarouselImage text="First slide" />
+//         <Carousel.Caption>
+//           <h3>First slide label</h3>
+//           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+//         </Carousel.Caption>
+//       </Carousel.Item>
+//       <Carousel.Item>
+//         <ExampleCarouselImage text="Second slide" />
+//         <Carousel.Caption>
+//           <h3>Second slide label</h3>
+//           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+//         </Carousel.Caption>
+//       </Carousel.Item>
+//       <Carousel.Item>
+//         <ExampleCarouselImage text="Third slide" />
+//         <Carousel.Caption>
+//           <h3>Third slide label</h3>
+//           <p>
+//             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+//           </p>
+//         </Carousel.Caption>
+//       </Carousel.Item>
+//     </Carousel>
+//   );
+// }
+
+// export default Home;
+
 import React, { useState } from 'react';
 import {
   Carousel,

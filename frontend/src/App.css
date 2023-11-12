@@ -1,15 +1,16 @@
-/*#root {
+#root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-} */
+}
 
 body {
   background-color: rgb(211, 208, 208);
   color: black;
   overflow-x: hidden; 
   width: 1000px;
+  font-family: cursive;
 }
 
 .routes-container{
@@ -35,7 +36,7 @@ header {
 }
 
 /* NAV */
-.Nav {
+/* .Nav {
   width: 100%;
   height: 50px;
   display: flex;
@@ -43,11 +44,11 @@ header {
   align-items: right;
   background-color: rgba(0, 0, 0, 0);
   padding: 10px 20px;
-}
+} */
 
-.Nav .menu-links {
+/* .Nav .menu-links {
   display: fixed; /* Initially hide the links */
-}
+/* }
 
 .Nav ul {
   display: flex;
@@ -56,9 +57,9 @@ header {
   margin: 0px;
   padding: 0px;
   overflow: hidden;
-}
+} */ */
 
-.Nav ul li {
+/* .Nav ul li {
   list-style-type: none;
   padding-right: 10px;
 }
@@ -75,11 +76,11 @@ height: 100vh;
 width: 50vw;
 margin-top: 50px;
 position: fixed;
-}
+} */
 /* End of NAV */
 
 /* Hamburger */
-.hamburger-icon {
+/* .hamburger-icon {
   user-select: none;
   display: block;
   cursor: pointer;
@@ -111,7 +112,7 @@ position: fixed;
 
 .menu-links a:hover {
   color: blue;
-}
+} */
 
 /* 
 .burger1 {
