@@ -1,0 +1,60 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.sscard{
+    background-color: black;
+    border-style: double;
+    border-color: white;
+    color: white;
+}
+
+#sshomediv{
+    margin: 50px;
+}
+.details{
+    font-family: 'Playfair Display';
+    color: white;
+}
+.grid{
+    display: block;
+    margin: 20px;
+    background-color: black;
+}
+
+li{
+    list-style-type: none;
+}
+.list-container{
+    margin: auto;
+}
+
+#reviewsdiv{
+    border: 1px solid white;
+    margin: 5px;
+    padding: 10px;
+}
+
+#title{
+    font-family: 'DM Serif Text';
+    font-weight: bold;
+    color: white;
+}
+
+#ssbutton{
+    border-radius: 0;
+    font-family: 'Oswald';
+    margin: 5px;
+    color: black;
+}
+
+.sscontainer{
+    border: solid white;
+    border-style: double;
+    margin: 8px;
+}
+#trailName{
+    font-family: 'Oswald';
+    color: white;
+}

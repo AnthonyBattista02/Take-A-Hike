@@ -1,17 +1,13 @@
 import { Link } from 'react-router-dom'
+import './Trails.css'
 
 const ChooseYourTrail = () => {
     return(
-        <div>
-            <div>
-                <h1>Choose Your Trail</h1>
-                <h3>Our trails are amazing.  Go check it out. </h3>
-                <button><Link to = {`/trails`}>Trails List</Link></button>
+            <div id="sshomediv">
+                <h1 id = "title">Choose Your Trail</h1>
+                <h3 id = "trailName">To those who savor the outdoors, we offer a portal to nature's bounty.  </h3>
+                <button id = 'ssbutton'><Link to = {`/trails`}>Trails List</Link></button>
             </div>
-            <div>
-
-            </div>
-        </div>
     )
 }
 

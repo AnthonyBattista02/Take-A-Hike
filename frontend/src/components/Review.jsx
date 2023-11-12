@@ -15,7 +15,7 @@ export default function Review () {
         console.log(response.data)
         }
         getReviews()
-    }, [reviews])
+    }, [])
 
     const handleClick = (reviewId) => {
         axios.delete(`${BASE_URL}/reviews/${reviewId}`)
