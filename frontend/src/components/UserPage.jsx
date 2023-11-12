@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
+import './Trails.css'
 
 
 import { BASE_URL } from '../globals'  
@@ -73,40 +74,40 @@ return user ? (
     <div className="detail">
         <div>
             <Link to = {`/trails`}>
-                <button>Return to List of Trails</button>
+                <button id="ssbutton">See List of Trails</button>
             </Link>
         </div>
-        <h2 className="detail-title">User Trails</h2>
-        <div>
-            <h2>Want to Hike:</h2>
+        <h2 id = "title" className="detail-title">USER TRAILS</h2>
+        <div className='sscontainer'>
+            <h2 id = "title">WANT TO HIKE:</h2>
             {user.wantToHike.map((element) => (
                 <div key = {element._id}>
                     <Link to = {`/trails/${element._id}`} >
                         <div>
-                            <h3>{element.trailName}</h3>
+                            <h3 id = "trailName">{element.trailName}</h3>
                         </div>
                     </Link> 
                     <div>
-                        <button onClick = {() => removeWantToHikeTrail(element._id)}>Remove</button>  
-                        <button onClick = {() =>moveTrail(element)}>Mark as Hiked</button>
+                        <button id="ssbutton" onClick = {() => removeWantToHikeTrail(element._id)}>Remove</button>  
+                        <button id="ssbutton" onClick = {() =>moveTrail(element)}>Mark as Hiked</button>
                     </div>
                 </div>
             ))
             }
         </div>
-        <div key = {user._id}>
-            <h2>Have Hiked:</h2>
+        <div className= 'sscontainer' key = {user._id}>
+            <h2 id = "title">HAVE HIKED:</h2>
             {user.haveHiked.map((element) => (
                 <div key = {element._id}>
                     <Link to = {`/trails/${element._id}`} >
                         <div>
-                            <h3>{element.trailName}</h3>
+                            <h3 id = "trailName">{element.trailName}</h3>
                         </div>
                     </Link>  
                     <div>
-                        <button onClick = {() => removeHikedTrail(element._id)}>Remove</button> 
+                        <button id="ssbutton" onClick = {() => removeHikedTrail(element._id)}>Remove</button> 
                         <Link to = {`/reviews`} >
-                            <button>Write Review</button>
+                            <button id="ssbutton">Write Review</button>
                         </Link>
                     </div>
                 </div>
