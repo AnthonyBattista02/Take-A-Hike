@@ -1,10 +1,12 @@
 # Take-A-Hike
+<img src= https://github.com/AnthonyBattista02/Take-A-Hike/assets/143963972/76d2aac6-80d0-4c81-a74d-e4646b6056e1 width=950, height=500> 
+
 
 ## Project Description
-Our task is to build a full-stack, professional-looking application with a functioning backend and frontend. The application wil be a trail tracking site where you can find trails on a range of difficulty near you and track which ones you have been to as well as write and read reviews for them. 
+Take A Hike is intended for the outdoor connoisseur.  It is a full-stack application with both a functioning backend and frontend.  Created with hiking enthusiasts in mind, it is a site where you can view nearby trails, see detailed information about individual trails, track trails you would like to visit and those that you have visited as well as write and read reviews for them. 
 
 ## Technology Used
-This is a MERN application so we will be using Mongoose, Express, React, Node. 
+Take A Hike is a MERN application using Mongoose, Express, React, Node. 
 
 ## Getting Started
 
@@ -19,5 +21,21 @@ https://lucid.app/lucidchart/5737306d-dc3f-471e-8cd7-8b89595d7bea/edit?viewport_
 #### ERD
 https://drive.google.com/file/d/1i5Ce8Mz8Cu_rabkMBe2O04IuyalyBNGy/view?usp=sharing 
 
+## Data Model Browser Renderings
+#### Trail
+<img src= https://github.com/AnthonyBattista02/Take-A-Hike/assets/143963972/1eaddb17-77d1-48df-8958-364628afa281 width=750, height=500>
+
+#### User
+<img src = https://github.com/AnthonyBattista02/Take-A-Hike/assets/143963972/9fa2d810-6bdc-444f-b882-f70f9868dfce width=750, height=500>
+
+#### Review
+<img src = https://github.com/AnthonyBattista02/Take-A-Hike/assets/143963972/a49f4f8d-353b-4890-85ac-1731b9df32e9 width=750, height=500>
+
+
 ## Future Updates
-Stretch goals such as a rating system in reviews are planned, but only after a MVP is made.
+Stretch goals such as rendered images of each trail, a rating system in reviews, and multiple user profiles are goals for future iterations.
+
+## Contributors
+<a href = "https://github.com/AnthonyBattista02">Anthony Battista</a><br>
+<a href = "https://github.com/ahunter623">Anthony Hunter</a><br>
+<a href = "https://github.com/srhshaw">Shanda Shaw</a><br>
