@@ -3,15 +3,16 @@ import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
 import './Trails.css'
 
-
 import { BASE_URL } from '../globals'  
 
+//COMPONENT UTILIZES USER & TRAIL DATA
 export default function UserDetails() {
     const [user, setUser] = useState()
     const [trls, setTrls] = useState([])
     let {id} = useParams()
     
     useEffect(() => {
+        //GET- FUNCTIONS TO FETCH USER & TRAIL DATA
         const getUser = async() => {
             const response = await axios.get(`${BASE_URL}/users/654c1403aca523c0ae6541a7`)
             console.log(response.data)
@@ -26,13 +27,13 @@ export default function UserDetails() {
         getTrls()
     },[])   
 
+    //PUT- FUNCTION TO REMOVE A TRAIL FROM THE USER MODEL WANT-TO-HIKE PROPERTY ARRAY
     const removeWantToHikeTrail = async (trailIDVar) => {
-        //if (confirm("Are you sure you want to remove this trail?")){
         const indexToDelete = user.wantToHike.findIndex((element) => element._id === trailIDVar)
         user.wantToHike.splice(indexToDelete, 1)
         await axios.put(`${BASE_URL}/users/${user._id}`, user)
 
-        //Only a field in user changed, update that property to trigger a re-render
+        //ONLY A FIELD IN USER CHANGED, UPDATE THAT PROPERTY TO TRIGGER A RE-RENDER.
         setUser({
             ...user,
             wantToHike: user.wantToHike
@@ -40,17 +41,18 @@ export default function UserDetails() {
         //}
     }
 
+    //PUT- FUNCTION TO REMOVE A TRAIL FROM THE USER MODEL WANT-TO-HIKE PROPERTY ARRAY THEN ADD (PUSH) IT INTO THE HAVE-HIKED ARRAY.
     const moveTrail = async (trail) => {
         const indexToDelete = user.wantToHike.findIndex((element) => element._id === trail._id)
         user.wantToHike.splice(indexToDelete, 1)
 
         const found = user.haveHiked.find((element) => element === trail._id)
         if (!found) {
-            user.haveHiked.push(trail)
-            console.log(user)
-                 
+            user.haveHiked.push(trail)        
         }
         await axios.put(`${BASE_URL}/users/${user._id}`, user)
+
+        //ONLY A FIELD IN USER CHANGED, UPDATE THAT PROPERTY TO TRIGGER A RE-RENDER.
         setUser({
             ...user,
             haveHiked: user.haveHiked,
@@ -58,12 +60,13 @@ export default function UserDetails() {
         })
     }
 
+    //PUT- FUNCTION TO REMOVE A TRAIL FROM THE USER MODEL HAVE-HIKED ARRAY
     const removeHikedTrail = async (trailIDVar) => {
         const indexToDelete = user.haveHiked.findIndex((element) => element._id === trailIDVar)
         user.haveHiked.splice(indexToDelete, 1)
         await axios.put(`${BASE_URL}/users/${user._id}`, user)
 
-        // Only a field in user changed, update that property to trigger a re-render
+        //ONLY A FIELD IN USER CHANGED, UPDATE THAT PROPERTY TO TRIGGER A RE-RENDER.
         setUser({
             ...user,
             haveHiked: user.haveHiked
