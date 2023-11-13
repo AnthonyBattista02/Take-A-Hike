@@ -13,10 +13,12 @@ body {
 #sshomediv{
     margin: 50px;
 }
+
 .details{
     font-family: 'Playfair Display';
     color: white;
 }
+
 .grid{
     display: block;
     margin: 20px;
@@ -26,6 +28,7 @@ body {
 li{
     list-style-type: none;
 }
+
 .list-container{
     margin: auto;
 }
@@ -54,6 +57,7 @@ li{
     border-style: double;
     margin: 8px;
 }
+
 #trailName{
     font-family: 'Oswald';
     color: white;

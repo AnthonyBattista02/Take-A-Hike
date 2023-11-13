@@ -1,5 +1,6 @@
 const User = require('../models/user');
 
+//USER
 const getAllUsers = async (req, res) => {
     try {
         const users = await User.find()
@@ -12,7 +13,7 @@ const getAllUsers = async (req, res) => {
 const getUserById = async (req, res) => {
     try {
         const { id } = req.params;
-        //populate knows to look for the data in the model (Trail) ref of the key (wantToHike, haveHiked) in the user model
+        //POPULATE KNOWS TO LOOK FOR THE DATA IN THE MODEL (Trail) REF OF THE KEY  (wantToHike, haveHiked) IN THE USER MODEL
         const user = await User.findById(id).populate("wantToHike").populate("haveHiked").exec()
         console.log(user)
         if (user) {

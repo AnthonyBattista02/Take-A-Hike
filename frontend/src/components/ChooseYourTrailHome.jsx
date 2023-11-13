@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import './Trails.css'
 
+//HOMEPAGE INTRO & LINK TO TRAILS LIST INDEX PAGE
 const ChooseYourTrail = () => {
     return(
             <div id="sshomediv">

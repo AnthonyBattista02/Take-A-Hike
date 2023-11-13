@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react'
-import { useNavigate, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
 import './Trails.css'
 
+//COMPONENT UTILIZES TRAIL & USER DATA
 const TrailList = () => {
     const [trails, setTrails] = useState([])
     const [users, setUsers] = useState([])
 
     useEffect(() => {
+        //GET- FUNCTIONS TO FETCH TRAIL & USER DATA
         const getTrails = async () => {
         const response = await axios.get(`${BASE_URL}/trails`)
         setTrails(response.data)
@@ -21,13 +23,7 @@ const TrailList = () => {
         getUser()
     }, [])   
 
-        let navigate = useNavigate()
-
-        const showTrail = (variable) => {
-            navigate(`${variable}`)
-        }
-
-
+       //PUT- FUNCTION TO ADD TRAIL TO USER MODEL WANT-TO-HIKE PROPERTY ARRAY
         const addWantToHike = async (trailIDVar) => {
             let currentUser = users[0]
             const found = currentUser.wantToHike.find((element) => element === trailIDVar)
