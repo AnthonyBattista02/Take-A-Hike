@@ -7,7 +7,7 @@
     width: 100%;
     background-color: bisque;
 }
-img {
+#treelogo {
     height: 60px;
     width: 95px;
     padding-right: 20px;
@@ -27,7 +27,7 @@ img {
     display: flex;
     flex-direction: row;
 }
-p {
+#copyright {
     font-size: 10px;
     position: absolute;
     bottom: 0;

@@ -14,7 +14,7 @@ export default function UserDetails() {
     useEffect(() => {
         //GET- FUNCTIONS TO FETCH USER & TRAIL DATA
         const getUser = async() => {
-            const response = await axios.get(`${BASE_URL}/users/654c1403aca523c0ae6541a7`)
+            const response = await axios.get(`${BASE_URL}/users/65522e30103de93b22e78d12`)
             console.log(response.data)
             setUser(response.data)
         }
